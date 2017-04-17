@@ -1,0 +1,23 @@
+create 'niit', 'student_master', 'fy_sem1'
+
+put 'niit', 'S001', 'student_master:name', 'Rahul'
+
+scan 'niit'
+
+put 'niit', 'S001', 'student_master:add', 'Delhi'
+
+put 'niit', 'S002', 'student_master:add', 'Mumbai'
+
+alter 'niit', {NAME => 'student_master', VERSIONS => '3'}
+
+put 'niit', 'S002', 'student_master:add', 'Pune'
+
+get 'niit', 'S002'
+
+get 'niit', 'S002',{COLUMN => 'student_master:add', VERSIONS => 2}
+
+put 'niit', 'S002', 'student_master:disability', 'yes'
+
+
+
+
